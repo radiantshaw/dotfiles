@@ -47,6 +47,9 @@ Plug 'ngmy/vim-rubocop'
 
 " Tagfile management
 Plug 'ludovicchabant/vim-gutentags'
+
+" Slim syntax highlighting
+Plug 'slim-template/vim-slim'
 call plug#end()
 " }}}
 
