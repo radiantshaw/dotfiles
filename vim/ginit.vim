@@ -8,3 +8,6 @@ endif
 
 " Colorscheme
 colorscheme srcery
+
+" Tabs
+set guitablabel=%N\.\ %M%t
