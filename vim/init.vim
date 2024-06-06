@@ -74,3 +74,8 @@ packadd cfilter
 " RuboCop config {{{
 let g:vimrubocop_extra_args = '--disable-pending-cops'
 " }}}
+
+" Use Srcery colorscheme {{{
+set termguicolors
+colorscheme srcery
+" }}}
