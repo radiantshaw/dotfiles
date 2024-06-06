@@ -26,6 +26,7 @@ augroup END
 " Searching {{{
 set path=**,/usr/include
 set wildignore=**/node_modules/**,**.log,tags,**.tar.gz
+set wildoptions+=pum
 
 set hlsearch
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
@@ -73,4 +74,9 @@ packadd cfilter
 
 " RuboCop config {{{
 let g:vimrubocop_extra_args = '--disable-pending-cops'
+" }}}
+
+" Use Srcery colorscheme {{{
+set termguicolors
+colorscheme srcery
 " }}}
