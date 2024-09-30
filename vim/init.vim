@@ -1,6 +1,8 @@
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
+let g:mapleader = " "
+
 " Indentation {{{
 set expandtab
 set shiftwidth=0
