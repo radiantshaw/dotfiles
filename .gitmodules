@@ -1,0 +1,12 @@
+[submodule "nvim/pack/common/start/srcery-vim"]
+	path = nvim/pack/common/start/srcery-vim
+	url = https://github.com/srcery-colors/srcery-vim.git
+[submodule "nvim/pack/common/start/copilot"]
+	path = nvim/pack/common/start/copilot
+	url = https://github.com/github/copilot.vim
+[submodule "nvim/pack/common/start/plenary"]
+	path = nvim/pack/common/start/plenary
+	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "nvim/pack/common/start/CopilotChat"]
+	path = nvim/pack/common/start/CopilotChat
+	url = https://github.com/CopilotC-Nvim/CopilotChat.nvim
