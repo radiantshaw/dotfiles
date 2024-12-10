@@ -10,3 +10,6 @@
 [submodule "nvim/pack/common/start/CopilotChat"]
 	path = nvim/pack/common/start/CopilotChat
 	url = https://github.com/CopilotC-Nvim/CopilotChat.nvim
+[submodule "nvim/pack/common/start/vim-test"]
+	path = nvim/pack/common/start/vim-test
+	url = https://github.com/vim-test/vim-test.git
