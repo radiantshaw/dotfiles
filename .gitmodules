@@ -22,3 +22,6 @@
 [submodule "nvim/pack/common/start/syntastic"]
 	path = nvim/pack/common/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "nvim/pack/common/start/vim-gutentags"]
+	path = nvim/pack/common/start/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git
