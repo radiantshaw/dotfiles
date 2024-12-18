@@ -25,3 +25,6 @@
 [submodule "nvim/pack/common/start/vim-gutentags"]
 	path = nvim/pack/common/start/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule "nvim/pack/common/start/vim-jsx-pretty"]
+	path = nvim/pack/common/start/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
