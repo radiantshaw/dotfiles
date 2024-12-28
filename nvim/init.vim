@@ -51,7 +51,5 @@ packadd cfilter
 
 colorscheme srcery
 
-lua require("CopilotChat").setup { }
-
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_check_on_open = 1
