@@ -1,3 +1,5 @@
+runtime! init.d/*.vim
+
 let g:mapleader = " "
 
 " Indentation {{{
