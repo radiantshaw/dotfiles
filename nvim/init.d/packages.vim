@@ -19,6 +19,7 @@ call minpac#add('scrooloose/syntastic')
 call minpac#add('github/copilot.vim')
 call minpac#add('nvim-lua/plenary.nvim', { 'type': 'opt' })
 call minpac#add('CopilotC-Nvim/CopilotChat.nvim', { 'type': 'opt' })
+call minpac#add('maxmellon/vim-jsx-pretty')
 
 if has('nvim')
   packadd plenary.nvim
