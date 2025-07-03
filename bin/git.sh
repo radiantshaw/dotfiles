@@ -12,14 +12,14 @@ ensure_git_config_dir() {
 
 setup_git_ignore_file() {
   local git_ignore_target_file="$GIT_CONFIG_DIR/ignore"
-  local git_ignore_source_file="$(get_dotfiles_dir)/git/ignore"
+  local git_ignore_source_file="$(get_dotfiles_dir)/tools/git/ignore"
 
-  if [ -L "$git_ignore_target_file" ]; then
+  if [ -e "$git_ignore_target_file" ]; then
     echo "Git ignore file already exists at $git_ignore_target_file"
   else
     echo "Setting up git ignore file at $git_ignore_target_file"
 
-    ln -s "$git_ignore_source_file" "$git_ignore_target_file"
+    ln -sf "$git_ignore_source_file" "$git_ignore_target_file"
   fi
 }
 
