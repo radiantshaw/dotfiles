@@ -18,7 +18,7 @@ link() {
   local source_file="$NVIM_DOT_DIR/$link"
   local target_file="$NVIM_CONFIG_DIR/$link"
 
-  if [ -e "$target_file" ]; then
+  if [ -e "$target_file" ] || [ -L "$target_file" ]; then
     rm -f "$target_file"
   fi
 
