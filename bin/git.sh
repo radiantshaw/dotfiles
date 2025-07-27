@@ -1,27 +1,34 @@
-#!/bin/bash
+if [ -z "$XDG_CONFIG_HOME" ]; then
+  XDG_CONFIG_HOME="$HOME/.config"
+fi
 
-source "$(dirname "${BASH_SOURCE[0]}")/utils/config.sh"
+GIT_CONFIG_DIR="$XDG_CONFIG_HOME/git"
+GIT_DOT_DIR="$HOME/.files/tools/git"
 
-ensure_git_config_dir() {
-  local git_config_dir="$(get_user_config_dir)/git"
-
-  mkdir -p "$git_config_dir"
-
-  echo "$git_config_dir"
-}
-
-setup_git_ignore_file() {
-  local git_ignore_target_file="$GIT_CONFIG_DIR/ignore"
-  local git_ignore_source_file="$(get_dotfiles_dir)/tools/git/ignore"
-
-  if [ -e "$git_ignore_target_file" ]; then
-    echo "Git ignore file already exists at $git_ignore_target_file"
-  else
-    echo "Setting up git ignore file at $git_ignore_target_file"
-
-    ln -sf "$git_ignore_source_file" "$git_ignore_target_file"
+ensure() {
+  if [ ! -d "$GIT_CONFIG_DIR" ]; then
+    mkdir "$GIT_CONFIG_DIR"
+    echo "Created Git configuration directory at $GIT_CONFIG_DIR"
   fi
 }
 
-GIT_CONFIG_DIR=$(ensure_git_config_dir)
-setup_git_ignore_file
+link() {
+  local source_file="$GIT_DOT_DIR/$2"
+  local target_file="$GIT_CONFIG_DIR/$1"
+
+  if [ -e "$target_file" ]; then
+    rm -f "$target_file"
+  fi
+
+  ln -s "$source_file" "$target_file"
+  echo "Linked $target_file to $source_file"
+}
+
+case "$1" in
+  ensure)
+    ensure
+    ;;
+  link)
+    link "$2" "$3"
+    ;;
+esac
