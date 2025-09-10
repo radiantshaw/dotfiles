@@ -15,3 +15,8 @@ vim.keymap.set('n', '<leader>er', ':Rexplore<CR>', {
   noremap = true,
   silent = true,
 })
+
+vim.keymap.set('n', '<leader>e.', ':edit %:h<C-Z>', {
+  desc = 'Edit other files in the current directory',
+  noremap = true,
+})
