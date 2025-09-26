@@ -22,3 +22,6 @@ vim.keymap.set('n', '<leader>ad', ':argdelete %<CR>', { desc = 'Remove current f
 vim.keymap.set('n', '<leader>ae', ':argument<CR>', { desc = 'Switch to current file in arglist' })
 vim.keymap.set('n', '<leader>an', arg_move_right, { desc = 'Shift current file after next file in arglist' })
 vim.keymap.set('n', '<leader>ap', arg_move_left, { desc = 'Shift current file before previous file in arglist' })
+vim.keymap.set('n', '<leader>al', ':arglocal<CR>', { desc = 'Switch to local arglist' })
+vim.keymap.set('n', '<leader>ag', ':argglobal<CR>', { desc = 'Switch to global arglist' })
+vim.keymap.set('n', '<leader>as', ':args<CR>', { desc = 'Display the arglist' })
