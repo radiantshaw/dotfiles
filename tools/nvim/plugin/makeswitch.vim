@@ -40,3 +40,4 @@ function! s:SwitchCompilerAndMake()
 endfunction
 
 nnoremap <silent> <Leader>ms :call <SID>SwitchCompilerAndMake()<CR>
+nnoremap <silent> <Leader>mf :make %<CR>
