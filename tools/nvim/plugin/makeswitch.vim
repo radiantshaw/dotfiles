@@ -1,6 +1,6 @@
 let s:compiler_map = {
   \ 'ruby': {
-    \ 'rspec': 'bundle exec rspec',
+    \ 'rspec': 'bundle exec rspec --format failures',
     \ 'rubocop': 'bundle exec rubocop'
   \ }
 \ }
