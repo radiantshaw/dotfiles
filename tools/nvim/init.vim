@@ -1,3 +1,7 @@
+if !has('nvim')
+  source $VIMRUNTIME/defaults.vim
+endif
+
 runtime! init.d/*.vim
 
 let g:mapleader = " "
