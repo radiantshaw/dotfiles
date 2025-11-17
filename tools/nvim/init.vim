@@ -56,3 +56,7 @@ packadd cfilter
 " }}}
 
 colorscheme srcery
+
+if !has("nvim")
+  highlight! link SpecialKey SrceryXgray4
+endif
