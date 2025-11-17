@@ -1,3 +1,7 @@
+if !has('nvim')
+  source $VIMRUNTIME/defaults.vim
+endif
+
 runtime! init.d/*.vim
 
 let g:mapleader = " "
@@ -52,3 +56,7 @@ packadd cfilter
 " }}}
 
 colorscheme srcery
+
+if !has("nvim")
+  highlight! link SpecialKey SrceryXgray4
+endif
