@@ -1,5 +1,10 @@
-unlet! skip_defaults_vim
-source $VIMRUNTIME/defaults.vim
+if !has('nvim')
+  source $VIMRUNTIME/defaults.vim
+endif
+
+runtime! init.d/*.vim
+
+let g:mapleader = " "
 
 " Indentation {{{
 set expandtab
@@ -32,28 +37,6 @@ set hlsearch
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 " }}}
 
-" Plugins {{{
-call plug#begin('~/.vim/plugged')
-" Srcery colorscheme
-Plug 'srcery-colors/srcery-vim'
-
-" JSX syntax highlighting
-Plug 'maxmellon/vim-jsx-pretty'
-
-" CoffeeScript syntax highlighting
-Plug 'kchmck/vim-coffee-script'
-
-" RuboCop
-Plug 'ngmy/vim-rubocop'
-
-" Tagfile management
-Plug 'ludovicchabant/vim-gutentags'
-
-" Slim syntax highlighting
-Plug 'slim-template/vim-slim'
-call plug#end()
-" }}}
-
 " Diff mode color contrast {{{
 hi DiffAdd ctermfg=Green ctermbg=NONE
 hi DiffChange ctermfg=NONE ctermbg=NONE
@@ -72,11 +55,8 @@ endif
 packadd cfilter
 " }}}
 
-" RuboCop config {{{
-let g:vimrubocop_extra_args = '--disable-pending-cops'
-" }}}
-
-" Use Srcery colorscheme {{{
-set termguicolors
 colorscheme srcery
-" }}}
+
+if !has("nvim")
+  highlight! link SpecialKey SrceryXgray4
+endif
