@@ -37,13 +37,6 @@ set hlsearch
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 " }}}
 
-" Diff mode color contrast {{{
-hi DiffAdd ctermfg=Green ctermbg=NONE
-hi DiffChange ctermfg=NONE ctermbg=NONE
-hi DiffDelete ctermfg=Red ctermbg=NONE
-hi DiffText ctermfg=Yellow ctermbg=NONE
-" }}}
-
 " The Silver Searcher {{{
 if executable('ag')
   set grepprg=ag\ --vimgrep\ $*
