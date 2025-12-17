@@ -1,15 +1,19 @@
-if !exists(":YankAbsolute")
-  command YankAbsolute :let @+ = expand('%:p')
+if !exists(":YankAbsolutePath")
+  command YankAbsolutePath :let @+ = expand('%:p')
 endif
 
-if !exists(":YankCode")
-  command YankCode :let @+ = expand('%') . ':' . line('.')
+if !exists(":YankCodePoint")
+  command YankCodePoint :let @+ = expand('%') . ':' . line('.')
 endif
 
-if !exists(":YankName")
-  command YankName :let @+ = expand('%:t')
+if !exists(":YankFileName")
+  command YankFileName :let @+ = expand('%:t')
 endif
 
-if !exists(":YankRelative")
-  command YankRelative :let @+ = expand('%')
+if !exists(":YankRelativePath")
+  command YankRelativePath :let @+ = expand('%')
+endif
+
+if !exists(":YankFileContent")
+  command YankFileContent :%y +
 endif
