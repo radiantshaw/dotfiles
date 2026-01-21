@@ -4,3 +4,7 @@ tags
 tags.*
 
 .opencode/
+
+GTAGS
+GRTAGS
+GPATH
