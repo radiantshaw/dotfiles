@@ -14,7 +14,7 @@ set tabstop=2
 " }}}
 
 " Netrw {{{
-let g:netrw_list_hide='Session\.vim$,*\.swp$,*\.swo$,\.git/$,tags$,*\.tags$'
+let g:netrw_list_hide='Session\.vim$,*\.swp$,*\.swo$,\.git/$,tags$,*\.tags$,GPATH$,GRTAGS$,GTAGS$'
 let g:netrw_altfile=1
 let g:netrw_banner=0
 " }}}
