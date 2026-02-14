@@ -11,13 +11,12 @@ CompilerSet makeprg=bundle\ exec\ rails\ test
 CompilerSet errorformat=
     \%EFailure:,
     \%EError:,
+    \%Z\ \ \ \ %f:%l%.%#,
     \%C%*[^[]\ [%f:%l]:,
     \%+CExpected:\ %m,
-    \%+C\ \ Actual:\ %m,
-    \%C\ \ \ \ %f:%l:in\ %.%#,
-    \%C%.%#:\ %m,
-    \%C%.%#,
-    \%Z,
+    \%+Z\ \ Actual:\ %m,
+    \%C%*[^\ ]:,
+    \%C%m,
     \%-G%.%#
 
 let &cpo = s:cpo_save
