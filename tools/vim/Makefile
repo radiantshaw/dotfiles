@@ -1,14 +1,23 @@
-all: ensure link package
+.PHONY: dependencies setup
 
-ensure:
-	@bin/vim.sh ensure
+DOTFILES := $(HOME)/.files/tools/nvim
+VIM_CONFIG := $(HOME)/.vim
 
-link:
-	@bin/vim.sh link init.vim vimrc
-	@bin/vim.sh link init.d
-	@bin/vim.sh link plugin
-	@bin/vim.sh link after
-	@bin/vim.sh link compiler
+default: dependencies setup
 
-package:
-	@bin/vim.sh package
+dependencies:
+	@./bin/install.sh vim ctags
+
+VIM_FOLDER_NAMES := after compiler init.d plugin
+VIM_FOLDERS := $(addprefix $(VIM_CONFIG)/,$(VIM_FOLDER_NAMES))
+
+setup: $(VIM_CONFIG)/vimrc $(VIM_FOLDERS)
+
+$(VIM_FOLDERS): | $(VIM_CONFIG)
+	ln -s $(DOTFILES)/$(notdir $@) $@
+
+$(VIM_CONFIG)/vimrc: | $(VIM_CONFIG)
+	ln -s $(DOTFILES)/init.vim $@
+
+$(VIM_CONFIG):
+	mkdir $@
